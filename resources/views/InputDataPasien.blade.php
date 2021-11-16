@@ -2,6 +2,7 @@
 <html>
     <head>
         <title> SiPERI - Tambah Data Pasien </title>
+        <a onclick="history.back()"> <-Kembali </a><br>
         <p1>Masukkan Data Pasien<br><br>
     </head>
     
@@ -32,7 +33,7 @@
             <button type="submit"> Lanjut</button>
         </form>
 
-        <a onclick="history.back()"> <-Kembali </a>
+        
 </body>
         
 
