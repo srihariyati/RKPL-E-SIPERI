@@ -1,0 +1,70 @@
+.background {
+    background: url(/img/bc.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.background .disini {
+    font-size: 14px;
+    margin-top: 45px;
+}
+
+.box {
+    background-color: white;
+    height: 520px;
+    width: 1000px;
+    left: 454px;
+    top: 210px;
+    border-radius: 13px;
+    margin: 150px auto;
+    box-shadow: -14px 13px 21px rgba(0, 0, 0, 0.25);
+}
+
+p {
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+}
+
+label{
+    width: 90%;
+    margin-left: 6%;
+}
+
+input{
+    background-color: #51BFBA;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 6px;
+}
+
+.button1{
+    float: left;
+    margin-left: 20px;
+    margin-top: -20px;
+    background-color: transparent;
+    border-color: transparent;
+    
+}
+
+.button2{
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    background: #3D84C2;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    border: none;
+    text-align: center;
+    padding: 8px 40px;
+}
+
+.judul{
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+ 
+}
