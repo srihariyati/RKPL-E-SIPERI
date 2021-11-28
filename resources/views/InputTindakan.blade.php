@@ -23,9 +23,14 @@
                 <option>Spesialis Konservasi Mulut</option>
                 <option>Spesialis Penyakit Mulut</option>
                 <option>Spesialis Radiologi Kedokteran Gigi</option></select></br>
-            
+                       
             <label>Nama Dokter</label><br>
-            <input type="text" required="required" name="dokterTindakan"></br>
+            <select  type="text" required="required" name="dokterTindakan"></br>
+                <option selected disabled>Pilih</option><br>
+                @foreach($namaDokter as $nD)
+                <option >{{$nD -> nama_dokter}}</option>
+                @endforeach
+            </select></br>
 
             <label>Jenis Tindakan</label><br>
             <textarea required="required" name="jenisTindakan"></textarea><br><br>

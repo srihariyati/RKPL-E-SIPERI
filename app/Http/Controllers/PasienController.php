@@ -42,8 +42,11 @@ class PasienController extends Controller
         ]);
 
         $nomorPasien = $request->noPasien;
+
+        $namaDokter = DB::table('data_dokter')->get();
         return view('InputTindakan')
-        ->with(['nomorPasien'=>$nomorPasien]);
+        ->with(['nomorPasien'=>$nomorPasien])
+        ->with(['namaDokter'=>$namaDokter]);
     }   
     
     public function tindakanStore(Request $request)
@@ -57,4 +60,43 @@ class PasienController extends Controller
         ]);
         return view('MenuPerawat');
     }
+    
+    public function showPasien($nama_dokter)
+    {
+        //Mencari ID pasien yang memiliki
+        //nama dokter terpilih pada tabel tindakan_pasien
+        $dataPasien = DB::table('data_pasien')
+        ->join('tindakan_pasien', 'data_pasien.no_pasien','=','tindakan_pasien.no_pasien')
+        ->where('tindakan_pasien.nama_dokter','=',$nama_dokter)
+        ->get()
+        ->unique('data_pasien.no_pasien'); //hanya memanggill satu data yang unik untuk ditampilkan
+        
+        $namaDokter = $nama_dokter;
+        
+        return view('ListPasien',['dataPasien'=>$dataPasien])
+        ->with(['namaDokter'=>$namaDokter]);
+    }
+
+    public function viewPasien($no_pasien)
+    {
+        $dataPasien = DB::table('data_pasien')
+        ->join('medik_pasien','data_pasien.no_pasien','=','medik_pasien.no_pasien')
+        ->where('medik_pasien.no_pasien','=',$no_pasien)
+        ->get()
+        ->unique('data_pasien.no_pasien');
+
+        $dataTindakan = DB::table('data_pasien')
+        ->join('tindakan_pasien','data_pasien.no_pasien','=','tindakan_pasien.no_pasien')
+        ->where('tindakan_pasien.no_pasien','=',$no_pasien)
+        ->get();
+
+        return view('ViewPasien',['dataPasien'=>$dataPasien],['dataTindakan'=>$dataTindakan]);
+    }
+
+    public function editPasien($no_pasien)
+    {
+
+    }
+      
+
 }

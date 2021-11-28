@@ -46,6 +46,10 @@ Route::get('/admin/inputdokter', function(){
 });
 Route::post('/inputdokter/store','DokterController@dataStore');
  
-Route::get('/lihat',function(){
-    return view('LihatData');
-});
+Route::get('/lihat','DokterController@showSpes');
+Route::get('/lihat/dokter/{spesialis}','DokterController@showDok');
+
+Route::get('/lihat/pasien/{nama_dokter}','PasienController@showPasien');
+
+Route::get('/pasien/view/{no_pasien}','PasienController@viewPasien');
+Route::get('/pasien/edit/{no_pasien}','PasienControlle@editPasien');
