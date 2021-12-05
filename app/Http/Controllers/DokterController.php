@@ -16,4 +16,21 @@ class DokterController extends Controller
         ]);
         return view('MenuAdmin');
     }
+
+    public function showSpes(Request $request)
+    {
+        //mengambil data dari tabel spesialis
+        $dataspesialis = DB::table('data_spesialis')->get();
+        return view('LihatData',['dataspesialis'=>$dataspesialis]);
+    }
+
+    public function showDok($spesialis)
+    {
+        $dokterlist = DB::table('data_dokter')
+        ->where('bidang_spesialis',$spesialis)->get();
+        $spes = $spesialis;
+        return view ('ListDokter',['dokterlist'=>$dokterlist])
+        ->with(['spes'=>$spes]);
+    }
+    
 }

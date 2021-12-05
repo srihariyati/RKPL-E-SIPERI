@@ -2,24 +2,27 @@
 <html>
    <head>
    <a onclick="history.back()"> <-Kembali </a><br>
-      Data Dokter Umum dan Spesialis gigi
+   <title> SiPERI - Daftar Dokter </title>
+     Data Dokter Umum dan Spesialis Gigi
    </head>
 
    <body>
       <table>
          <thead>
+             
             <tr>
-               <th> Bidang Spesialis</th>
-               <th>   </th>
+               <th>{{$spes}}</th>
+               <th></th>
             </tr>
          </thead>
 
          <tbody>
-            @foreach($dataspesialis as $dspes)
+            
             <tr>
-               <td>{{$dspes->spesialis}}</td>
+                @foreach($dokterlist as $dl)
+               <td>{{$dl -> nama_dokter}}</td>
                <td> 
-                  <a href = "/lihat/dokter/{{$dspes->spesialis}}">Lihat</a>
+                  <a href = "/lihat/pasien/{{$dl->nama_dokter}}">Pasien</a>
                   &nbsp;
                </td>
             </tr>
