@@ -1,0 +1,59 @@
+.background {
+    background: url(/img/bg.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.background .disini {
+    font-size: 14px;
+    margin-top: 45px;
+}
+
+.tombol_login {
+    font-size: 20px;
+    background: #3D84C2;
+    color: white;
+    font-size: 12pt;
+    padding: 12px 70px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tombol_login:hover {
+    background: #2b5d88;
+}
+
+.versioncontrol{
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 7rem;
+}
+
+.box {
+    text-align: center;
+    background-color: transparent;
+    height: 500px;
+    width: 800px;
+    left: 454px;
+    top: 228px;
+    border-radius: 13px;
+    margin: 150px auto;
+}
+
+.box h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 40px;
+}
+
+.box h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2021 at 05:58 PM
+-- Generation Time: Dec 05, 2021 at 02:03 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `data_dokter` (
   `no_dokter` varchar(10) NOT NULL,
-  `nama_dokter` varchar(255) NOT NULL,
+  `nama_dokter` text NOT NULL,
   `bidang_spesialis` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,8 +39,15 @@ CREATE TABLE `data_dokter` (
 --
 
 INSERT INTO `data_dokter` (`no_dokter`, `nama_dokter`, `bidang_spesialis`) VALUES
-('19018', 'SriHariyati', 'Spesialis Bedah Mulut'),
-('19018', 'SriHariyati', 'Spesialis Bedah Mulut');
+('1001', 'drg. Ali Syech. S.Kg, Sp.PM.', 'Spesialis Penyakit Mulut'),
+('2001', 'drg. Andi Angkasa. S.Kg, Sp.KG.', 'Spesialis Konservasi Mulut'),
+('2002', 'drg. Sintha. S.Kg, Sp.KG.', 'Spesialis Konservasi Mulut'),
+('3001', 'drg. Bambang. S.Kg, Sp.BM.', 'Spesialis Bedah Mulut'),
+('3002', 'drg. Siska Nasution. S.Kg, Sp.BM.', 'Spesialis Bedah Mulut'),
+('4001', 'drg. Sri Hariyati. S.Kg.', 'Dokter Gigi Umum'),
+('4002', 'drg. Sausan Nabilah. S.Kg.', 'Dokter Gigi Umum'),
+('403', 'drg. Ikram Muhaimin. S.Kg.', 'Dokter Gigi Umum'),
+('5001', 'drg. Anita. S.Kg, Sp.RKG.', 'Spesialis Radiologi Kedokteran Gigi');
 
 -- --------------------------------------------------------
 
@@ -62,7 +69,28 @@ CREATE TABLE `data_pasien` (
 --
 
 INSERT INTO `data_pasien` (`no_pasien`, `nama_pasien`, `tgl_lhr_pasien`, `almt_pasien`, `nohp_pasien`, `jk_pasien`) VALUES
-('PS02', 'jantung', '2021-11-10', 'sabang', '09090', 'Laki-laki');
+('PS02', 'Luna', '2021-12-15', 'Aceh', '081213141516', 'Perempuan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_spesialis`
+--
+
+CREATE TABLE `data_spesialis` (
+  `spesialis` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `data_spesialis`
+--
+
+INSERT INTO `data_spesialis` (`spesialis`) VALUES
+('Dokter Gigi Umum'),
+('Spesialis Bedah Mulut'),
+('Spesialis Konservasi Mulut'),
+('Spesialis Penyakit Mulut'),
+('Spesialis Radiologi Kedokteran Gigi');
 
 -- --------------------------------------------------------
 
@@ -123,10 +151,7 @@ CREATE TABLE `medik_pasien` (
 --
 
 INSERT INTO `medik_pasien` (`no_pasien`, `gol_darah`, `tek_darah`, `jantung`, `diabetes`, `hepatitis`, `alergi_obat`, `alergi_mkn`) VALUES
-('PS01', 'A', '90/90', 'Tidak', 'Tidak', 'Tidak', 'Tidak', 'Tidak'),
-('PS02', 'A', '90/90', 'Ya', 'Tidak', 'Ya', 'Tidak', 'Ya'),
-('PS02', 'A', '90/90', 'Ya', 'Tidak', 'Ya', 'Tidak', 'Ya'),
-('PS02', 'A', '90/90', 'Ya', 'Tidak', 'Ya', 'Tidak', 'Ya');
+('PS02', 'O', '90/100', 'Tidak', 'Tidak', 'Tidak', 'Tidak', 'Ya');
 
 -- --------------------------------------------------------
 
@@ -135,6 +160,7 @@ INSERT INTO `medik_pasien` (`no_pasien`, `gol_darah`, `tek_darah`, `jantung`, `d
 --
 
 CREATE TABLE `tindakan_pasien` (
+  `id_tindakan` int(255) NOT NULL,
   `no_pasien` varchar(10) NOT NULL,
   `tgl_tindakan` date NOT NULL,
   `nama_spesialis` text NOT NULL,
@@ -146,12 +172,20 @@ CREATE TABLE `tindakan_pasien` (
 -- Dumping data for table `tindakan_pasien`
 --
 
-INSERT INTO `tindakan_pasien` (`no_pasien`, `tgl_tindakan`, `nama_spesialis`, `nama_dokter`, `tindakan`) VALUES
-('PS02', '2021-11-11', 'Dokter Gigi Umum', 'aaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaa');
+INSERT INTO `tindakan_pasien` (`id_tindakan`, `no_pasien`, `tgl_tindakan`, `nama_spesialis`, `nama_dokter`, `tindakan`) VALUES
+(1, 'PS02', '2021-11-19', 'Dokter Gigi Umum', 'drg. Sri Hariyati. S.Kg.', 'Pemeriksaan Kesehatan Gigi'),
+(3, 'PS02', '2021-11-03', 'Dokter Gigi Umum', 'drg. Sri Hariyati. S.Kg.', 'Pemeriksaan Kesehatan Gigi'),
+(4, 'PS02', '2021-11-03', 'Spesialis Bedah Mulut', 'drg. Sri Hariyati. S.Kg.', 'Pemeriksaan Kesehatan Gigi');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `data_dokter`
+--
+ALTER TABLE `data_dokter`
+  ADD PRIMARY KEY (`no_dokter`);
 
 --
 -- Indexes for table `data_pasien`
@@ -170,6 +204,22 @@ ALTER TABLE `login_admin`
 --
 ALTER TABLE `login_perawat`
   ADD UNIQUE KEY `no_pegawai` (`no_pegawai`);
+
+--
+-- Indexes for table `tindakan_pasien`
+--
+ALTER TABLE `tindakan_pasien`
+  ADD PRIMARY KEY (`id_tindakan`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tindakan_pasien`
+--
+ALTER TABLE `tindakan_pasien`
+  MODIFY `id_tindakan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
