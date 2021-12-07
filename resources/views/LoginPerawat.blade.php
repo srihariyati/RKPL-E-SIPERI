@@ -21,9 +21,8 @@
         <form action="/perawat/login" method="GET">
         {{csrf_field()}}
             <div>
-                <input type="text" name="nomorpegawai" class="form_login" id="exampleInputEmail1" placeholder="Nomor Pegawai..." require="required">
-
-                <input type="password" name="password" class="form_login" id="exampleInputPassword1" placeholder="Password..." require="required">
+                <input type="text" required="required" name="nomorpegawai" class="form_login" id="exampleInputEmail1" placeholder="Nomor Pegawai..." >
+                <input type="password" required="required" name="password" class="form_login" id="exampleInputPassword1" placeholder="Password...">
 
                 <div class="mb-3 form-check rm">
                 <input type="checkbox" value="" id="flexCheckDefault">

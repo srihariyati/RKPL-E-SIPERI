@@ -18,26 +18,10 @@
     <div class="box">
         <h1 >SIPERI</h1>
         <h2 >Sistem Pencatatan Riwayat Pasien</h2>
-        <form action="" method="post">
-            <button type="submit" name="login"  class="btn btn-primary tombol_login">Input Perawat</button>
-        </form>
-        <br>
-
-        <form action="" method="post">
-            <button type="submit" name="login"  class="btn btn-primary tombol_login">Input Dokter</button>
-        </form>
-        <br>
-
-        <form action="" method="post">
-            <button type="submit" name="login"  class="btn btn-primary tombol_login">Lihat Data</button>
-        </form>
-        <br>
-
-        <form action="" method="post">
-            <button type="submit" name="login"  class="btn btn-primary tombol_login"><a style="text-decoration:none" class="text-white" href ="/">Log Out</a></button>
-        </form>
-
-        
+        <button class="btn btn-primary tombol_login"><a style="text-decoration:none" class="text-white" href="/admin/inputperawat">Input Data Perawat</a></button><br>
+        <button class="btn btn-primary tombol_login"><a style="text-decoration:none" class="text-white"  href="/admin/inputdokter">Input Data Dokter</a></button><br>
+        <button class="btn btn-primary tombol_login"><a style="text-decoration:none" class="text-white" href="/admin/lihat">Lihat Data</a></button><br>
+        <button class="btn btn-primary tombol_login"><a style="text-decoration:none" class="text-white"  href="/">Logout</a></button>
         <p class="pt-5 mt-5 versioncontrol">Made by Kelompok E RKPL</p>
     </div>
 
