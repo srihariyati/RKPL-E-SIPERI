@@ -29,9 +29,15 @@
         <br>
 
         <form action="" method="post">
-            <button type="submit" name="login"  class="btn btn-primary tombol_login">Lihat</button>
+            <button type="submit" name="login"  class="btn btn-primary tombol_login">Lihat Data</button>
+        </form>
+        <br>
+
+        <form action="" method="post">
+            <button type="submit" name="login"  class="btn btn-primary tombol_login"><a style="text-decoration:none" class="text-white" href ="/">Log Out</a></button>
         </form>
 
+        
         <p class="pt-5 mt-5 versioncontrol">Made by Kelompok E RKPL</p>
     </div>
 
