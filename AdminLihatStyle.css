@@ -1,0 +1,93 @@
+.background {
+    background: url('/img/bg.png');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.background .disini {
+    font-size: 14px;
+    margin-top: 45px;
+}
+
+.box {
+    background-color: white;
+    height: 560px;
+    width: 1000px;
+    left: 454px;
+    top: 210px;
+    border-radius: 13px;
+    margin: 150px auto;
+    box-shadow: -14px 13px 21px rgba(0, 0, 0, 0.25);
+}
+
+.box h1 {
+    color: #3D84C2;
+    text-align: center;
+    font-size: 70px;
+    padding-top: 40px;
+}
+
+.box h2 {
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -60px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+}
+
+select {
+    color: #474343;
+    background-color: #51BFBA;
+    width: 90%;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left;
+    margin-left: 5%;
+    border-radius: 6px;
+}
+
+text{
+    color: #000000;
+    background-color: #51BFBA;
+}
+
+label{
+    width: 90%;
+    margin-left: 6%;
+}
+
+input{
+    background-color: #51BFBA;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 6px;
+}
+
+.button2{
+    float: right;
+    margin-right: 180px;
+    background: #053d2c;
+    color: white;
+    border-radius: 5px;
+    font-size: 10px;
+    border: none;
+    text-align: center;
+    padding: 8px 50px;
+}
+
+.judul{
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+ 
+}
