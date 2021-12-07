@@ -19,13 +19,15 @@ class PerawatController extends Controller
 
     public function Login(Request $request)
     {
-        $pas = DB::table('login_perawat')->where('password',$request->password)->first();
         $result = DB::table('login_perawat')->where('no_pegawai',$request->nomorpegawai)->count();
+        $pas = DB::table('login_perawat')
+        ->select('password')
+        ->where('no_pegawai',$request->nomorpegawai)
+        ->first(); 
 
         if($result==1)
         {
-            if($request->password == $pas->password)
-            {
+            if($request->password == $pas->password){
                 return view('MenuPerawat');
             }else{
                 echo "<script>
@@ -38,8 +40,6 @@ class PerawatController extends Controller
             alert('No Pegawai Tidak terdaftar');
             </script>";
             return view("LandingPage");
-
-            
+            }
+        }
     }
-}
-}

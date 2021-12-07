@@ -1,0 +1,23 @@
+.rounded-6{
+    height: 39px;
+    left: 138px;
+    right: 118px;
+    top: 241px;
+    border-radius: 6px;
+}
+
+.spacing{
+    letter-spacing: 0.03em;
+}
+
+.radius-13{
+    border-radius: 13px;
+}
+
+.btn-peri{
+    width: 110px;
+    height: 48px;
+    left: 1180px;
+    top: 158px;
+    border-radius: 5px;
+}

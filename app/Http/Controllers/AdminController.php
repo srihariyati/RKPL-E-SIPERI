@@ -38,8 +38,7 @@ class AdminController extends Controller
 
         if($result==1)
         {
-            if($request->password == $pas->password)
-            {
+            if($request->password == $pas->password){
                 return view('MenuAdmin');
             }else{
                 echo "<script>
