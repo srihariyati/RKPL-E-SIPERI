@@ -32,7 +32,6 @@ class PerawatController extends Controller
                 alert('password salah');
                 </script>";
                 return view("LandingPage");
-
             }
         } else{
             echo "<script>

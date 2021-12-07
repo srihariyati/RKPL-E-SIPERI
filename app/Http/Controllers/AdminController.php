@@ -29,8 +29,12 @@ class AdminController extends Controller
 
     public function Login(Request $request)
     {
-        $pas = DB::table('login_admin')->where('password',$request->password)->first();
+        
         $result = DB::table('login_admin')->where('username',$request->username)->count();
+        $pas = DB::table('login_admin')
+        ->select('password')
+        ->where('username',$request->username)
+        ->first(); 
 
         if($result==1)
         {
@@ -42,16 +46,12 @@ class AdminController extends Controller
                 alert('password salah');
                 </script>";
                 return view("LandingPage");
-
             }
-        } else{
+        }else{
             echo "<script>
-            alert('Username Tidak ditemukan');
+            alert('Username Anda Tidak terdaftar');
             </script>";
-            return view("LandingPage");
-
-            
-    }
-}
-    
+            return view("LandingPage");            
+            }
+        }
 }
