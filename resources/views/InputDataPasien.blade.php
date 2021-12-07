@@ -11,6 +11,14 @@
 </head>
 <body>
      <form action="/pribadipasien/store" method="post" role="form">
+    <head>
+        <title> SiPERI - Tambah Data Pasien </title>
+        <a onclick="history.back()"> <-Kembali </a><br>
+        <p1>Masukkan Data Pasien<br><br>
+    </head>
+    
+    <body>
+        <form action="/pribadipasien/store" method="post" role="form">
             {{csrf_field()}}
             <label>Nomor Pasien</label><br>
             <input type="text" required="required" name="noPasien"></br>
@@ -37,3 +45,4 @@
         </form>
     </body>
 </html>
+
