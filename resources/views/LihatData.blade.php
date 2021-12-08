@@ -1,19 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <!-- CSS External -->
-    <link rel="stylesheet" href="/css/LihatDataStyle.css">
+   <!-- CSS External -->
+   <link rel="stylesheet" href="/css/LihatDataStyle.css">
 
-    <title>List Pasien</title>
-  </head>
-  <body class="bg-dark background">
+   <title>siPeri |Data Pasien</title>
+</head>
+   <body class="bg-dark background">
     <nav class="navbar">
         <img src="/img/logo.png" alt="logo">
     </nav>
@@ -27,24 +28,18 @@
             </div>
         </div>
         <div class="container  font-weight-bold pt-3">
-            <p class="text-white rounded-6 container pt-2" style="background: #51BFBA;">Dokter Spesialis Konservasi Gigi</p>
+            <p class="text-white rounded-6 container pt-2" style="background: #51BFBA;">Bidang Spesialis</p>
             <div class=" spacing">
+               @foreach($dataspesialis as $dspes)
                 <div class="row pt-4">
                     <div class="col">
-                        <img src="back.png" alt=""> drg. Andi Angkasa. S.Kg. Sp.KG.
+                        <img src="back.png" alt=""> {{$dspes->spesialis}}
                     </div>
                     <div class="col-sm d-flex justify-content-end   ">
-                        <button class="border-0 btn-peri" style="background: #51BFBA;"><a class="nav-link text-white" href="">Pasien</a></button>
+                        <button class="border-0 btn-peri" style="background: #51BFBA;"><a class="nav-link text-white" href="/lihat/dokter/{{$dspes->spesialis}}">Lihat</a></button>
                      </div>
                 </div>
-                <div class="row pt-4">
-                    <div class="col">
-                        <img src="back.png" alt=""> drg. Sintha. S.Kg. Sp.KG.
-                    </div>
-                    <div class="col-sm d-flex justify-content-end   ">
-                        <button class="border-0 btn-peri" style="background: #51BFBA;"><a class="nav-link text-white" href="">Pasien</a></button>
-                     </div>
-                </div>
+                @endforeach
             </div>
             <div class="pb-5">
             </div>
@@ -57,4 +52,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
+
 </html>

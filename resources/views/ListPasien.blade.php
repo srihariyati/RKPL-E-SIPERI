@@ -1,13 +1,25 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</html>
+<!DOCTYPE html>
+<html>
+   <head>
+   <a onclick="history.back()"> <-Kembali </a><br>
+   <title> SiPERI - Daftar Pasien </title>
+     Data Riwayat Pasien<br>
+     Pasien Dokter {{$namaDokter}}
+   </head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <body>
+      <table>
+         <thead>
+            <tr>
+               <th>ID</th>
+               <th>Nama Pasien</th>
+               <th>Tanggal Lahir</th>
+               <th>Jenis Kelamin</th>
+            </tr>
+         </thead>
 
+<<<<<<< HEAD
     <!-- CSS External -->
     <link rel="stylesheet" href="/css/ListPasienStyle.css">
 
@@ -70,3 +82,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+=======
+         <tbody>
+            
+            <tr>
+                @foreach($dataPasien as $dP)
+               <td>{{$dP->no_pasien}}</td>
+               <td>{{$dP->nama_pasien}}</td>
+               <td>{{$dP->tgl_lhr_pasien}}</td>
+               <td>{{$dP->jk_pasien}}</td>
+               <td> 
+                  <a href = "/pasien/view/{{$dP->no_pasien}}">View</a>
+                  &nbsp;
+               </td>
+               <td> 
+                  <a href = "/pasien/edit/{{$dP->no_pasien}}">Edit</a>
+                  &nbsp;
+               </td>
+            </tr>
+            @endforeach
+         <tbody>
+      </table>
+   </body>
+</html>
+>>>>>>> e5ad65302a9a8cccd302e2d5748900bfb85dd2d9
