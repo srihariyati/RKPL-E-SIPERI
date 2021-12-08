@@ -21,3 +21,49 @@
     top: 158px;
     border-radius: 5px;
 }
+
+.box {
+    background-color: white;
+    height: 560px;
+    width: 1000px;
+    left: 454px;
+    top: 210px;
+    border-radius: 13px;
+    margin: 150px auto;
+    box-shadow: -14px 13px 21px rgba(0, 0, 0, 0.25);
+}
+
+.button1{
+    float: left;
+    margin-left: 20px;
+    background-color: transparent;
+    border-color: transparent;
+    
+}
+
+.box {
+    background-color: white;
+    height: 560px;
+    width: 1000px;
+    left: 454px;
+    top: 210px;
+    border-radius: 13px;
+    margin: 150px auto;
+    box-shadow: -14px 13px 21px rgba(0, 0, 0, 0.25);
+}
+
+.table th:first-child{
+    border-radius:10px 0 0 10px;
+    border: none;
+  }
+  
+.table th:last-child{
+    border-radius:0 10px 10px 0;
+    border: none;
+  }
+
+.background {
+    background: url(/img/bck.png);
+    background-size: cover;
+    overflow: hidden;
+}
