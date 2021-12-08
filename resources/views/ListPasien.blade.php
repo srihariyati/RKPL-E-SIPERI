@@ -13,74 +13,55 @@
 
     <title>List Pasien</title>
   </head>
-  <body class="bg-dark">
-    <nav class="navbar navbar-expand-lg bg-dark justify-content-end">
+  <body class="bg-dark background">
+    <nav class="navbar navbar-expand-lg justify-content-end">
         <img src="/img/logo.png" alt="logo">
     </nav>
-    <form action="" class="container bg-white mt-5 radius-13 font-weight-bold">
-        <div class="row">
-            <div class="col-sm">
-                <img class="text-center pt-4 pb-3" src="/img/back.png" alt="arrowBack">
+    <div  class="container box bg-white mt-5 radius-13 font-weight-bold">
+        <div class="row row-cols-auto">
+            <div class="">
+                <img class="text-center pt-4 pb-3 container" src="/img/back.png" alt="arrowBack">
             </div>
-            <div class="col-sm">
-                <h3 class="text-center pt-5 pb-3">Data dan Riwayat Pasien</h3>
+            <div class="">
+                <h3 class="justify-content-start pt-4 pb-3">Data Riwayat Pasien</h3>
             </div>
-            <div class="col-sm d-flex justify-content-end  mt-4 ">
-               <button class="border-0 btn-peri" style="background: #51BFBA;"><a class=" text-white" href="">Unduh</a></button>
+            <div class="col-8 d-flex justify-content-end  pe-5 ">
+                <h3 class="justify-content-start pt-4 pb-3">drg. Sri Hariyati, S.Kg.</h3>
             </div>
         </div>
-        @foreach
         <div class="container">
-            <p class="text-white rounded-6 container pt-2" style="background: #51BFBA;">Data Pasien</p>
-            <div class="container spacing">
-                <div class="row">
-                    <div class="col">
-                        <p>ID : 01</p>
-                    </div>
-                    <!-- <div class="col col-lg-8">
-                        <p>01</p>
-                    </div> -->
-                </div>
-                <p>Nama : {{}}</p>
-                <p>TTL :</p>
-                <p>Pekerjaan :</p>
-                <p>Alamat :</p>
-                <p>No HP/Telp :</p>
-                <p>Jenis Kelamain :</p>
-            </div>
-            <p class="text-white rounded-6 container pt-2" style="background: #51BFBA;">Data Medik</p>
-            <div class="container spacing ">
-                <p>Golongan Darah : </p>
-                <p>Tekanan Darah : </p>
-                <p>Penyakit Jantung :</p>
-                <p>Diabetes :</p>
-                <p>Hepatitis :</p>
-                <p>Alergi Obat :</p>
-                <p>Alergi Makanan :</p>
-            </div>
-            <p class="text-white rounded-6 container pt-2" style="background: #51BFBA;">Riwayat Tindakan</p>
-            <div class="rounded-6" style="background: #B5B5C3;">
-                <div class="row">
-                    <div class="col-2">
-                        <p class=" font-weight-bold  container pt-2" >Tanggal</p>
-                    </div>
-                    <div class="col-8">
-                        <p class="font-weight-bold  container pt-2" >Tindakan</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <p class=" font-weight-bold  container pt-2" >26/10/2021</p>
-                </div>
-                <div class="col-8">
-                    <p class="font-weight-bold  container pt-2" >scalling, dan pencabutan gigi</p>
-                </div>
-            </div>
-            <div class="pb-5">
-            </div>
+            <table class="table">
+                <thead class="text-white" style="background: #51BFBA;">
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nama Pasien</th>
+                    <th scope="col">Tanggal Lahir</th>
+                    <th scope="col">Jenis Kelamin</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach($dataPasien as $dP)
+                    <td>{{$dP->no_pasien}}</td>
+                    <td>{{$dP->nama_pasien}}</td>
+                    <td>{{$dP->tgl_lhr_pasien}}</td>
+                    <td>{{$dP->jk_pasien}}</td>
+                    <td> 
+                        <button class="btn rounded-6" style="background: #51BFBA;"><a class="m-4 text-white" href = "/pasien/view/{{$dP->no_pasien}}">View</a></button>
+                        &nbsp;
+                    </td>
+                    <td> 
+                        <button class="btn btn-primary rounded-6"><a class="m-4 text-white" href = "/pasien/edit/{{$dP->no_pasien}}">Edit</a></button>
+                        &nbsp;
+                    </td>
+                    </tr>
+                    @endforeach
+                <tbody>
+            </table>
         </div>
-    </form>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
