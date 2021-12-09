@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> SiPERI - Tambah Data Pasien </title>
-    <a onclick="history.back()"> <-Kembali </a><br>
-    <p1>Masukkan Data Pasien<br><br>
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/InputDataPribadiStyle.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="icon" type="image/png" href="img/icons/icon-siagam.png">
+    <title> SIPERI - Tambah Data Pasien </title>
 </head>
-<body>
-     <form action="/pribadipasien/store" method="post" role="form">
-    <head>
-        <title> SiPERI - Tambah Data Pasien </title>
-        <a onclick="history.back()"> <-Kembali </a><br>
-        <p1>Masukkan Data Pasien<br><br>
-    </head>
-    
-    <body>
+
+<body class="background">
+    <nav class="navbar">
+        <img src="/img/logo.png" alt="logo">
+    </nav>
+    <div class="box">
+        <p class="judul">Masukkan Data Pasien</p>
+
         <form action="/pribadipasien/store" method="post" role="form">
             {{csrf_field()}}
+            <a onclick="history.back()"><img img class="text-center pt-4 pb-3 button1" src="/img/back.png" alt="arrowBack"></a>
+
             <label>Nomor Pasien</label><br>
             <input type="text" required="required" name="noPasien"></br>
 
-            <label>Nama Lengkap</label><br>
+            <label>Nama Lengkap </label><br>
             <input type="text" required="required" name="namaPasien"></br>
 
-            <label>Tanggal Lahir</label><br>
+            <label>Tanggal lahir</label><br>
             <input type="date" required="required" name="tgl_lhrPasien"></br>
-            
+
             <label>Alamat Pasien</label><br>
             <input type="text" required="required" name="alamatPasien"></br>
 
@@ -41,8 +46,8 @@
                 <option>Perempuan</option>
                 <option>Laki-laki</optio></select></br><br>
 
-            <button type="submit"> Lanjut</button>
+            <button type="submit" name="login" class="button2">Lanjut</button>
         </form>
-    </body>
+    </div>
+</body>
 </html>
-

@@ -1,7 +1,6 @@
 .background {
-    background: url(/img/bg.png);
+    background: url(/img/bck.png);
     background-size: cover;
-    overflow: hidden;
 }
 
 .background .disini {
@@ -56,24 +55,24 @@ select {
     border-radius: 6px;
 }
 
-text{
+text {
     color: #000000;
     background-color: #51BFBA;
 }
 
-label{
+label {
     width: 90%;
     margin-left: 6%;
 }
 
-input{
+input {
     background-color: #51BFBA;
     width: 90%;
     margin-left: 5%;
     border-radius: 6px;
 }
 
-.button2{
+.button2 {
     float: right;
     margin-right: 20px;
     background: #3D84C2;
@@ -85,15 +84,12 @@ input{
     padding: 8px 50px;
 }
 
-.button1{
+.button1 {
     float: left;
     margin-left: 20px;
     background-color: transparent;
     border-color: transparent;
-    
 }
-
-
 
 .tombol_login {
     font-size: 20px;
@@ -113,9 +109,8 @@ input{
     background: #2b5d88;
 }
 
-.judul{
+.judul {
     text-align: center;
     color: #000000;
     font-weight: bold;
- 
 }

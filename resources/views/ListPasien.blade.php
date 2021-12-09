@@ -1,44 +1,30 @@
-</html>
 <!DOCTYPE html>
-<html>
-   <head>
-   <a onclick="history.back()"> <-Kembali </a><br>
-   <title> SiPERI - Daftar Pasien </title>
-     Data Riwayat Pasien<br>
-     Pasien Dokter {{$namaDokter}}
-   </head>
-
-   <body>
-      <table>
-         <thead>
-            <tr>
-               <th>ID</th>
-               <th>Nama Pasien</th>
-               <th>Tanggal Lahir</th>
-               <th>Jenis Kelamin</th>
-            </tr>
-         </thead>
-
-<<<<<<< HEAD
-    <!-- CSS External -->
-    <link rel="stylesheet" href="/css/ListPasienStyle.css">
-
-    <title>List Pasien</title>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>siPeri | Daftar Pasien</title>
+     <!-- CSS External -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/LiatPasienStyle.css">
+</head>  
   <body class="bg-dark background">
-    <nav class="navbar navbar-expand-lg justify-content-end">
+    <nav class="navbar">
         <img src="/img/logo.png" alt="logo">
     </nav>
     <div  class="container box bg-white mt-5 radius-13 font-weight-bold">
         <div class="row row-cols-auto">
             <div class="">
-                <img class="text-center pt-4 pb-3 container" src="/img/back.png" alt="arrowBack">
+            <a onclick="history.back()"><img img class="text-center pt-4 pb-3 button1" src="/img/back.png" alt="arrowBack"></a>
             </div>
             <div class="">
                 <h3 class="justify-content-start pt-4 pb-3">Data Riwayat Pasien</h3>
             </div>
             <div class="col-8 d-flex justify-content-end  pe-5 ">
-                <h3 class="justify-content-start pt-4 pb-3">drg. Sri Hariyati, S.Kg.</h3>
+                <h3 class="justify-content-start pt-4 pb-3">{{$namaDokter}}</h3>
             </div>
         </div>
         <div class="container">
@@ -61,11 +47,11 @@
                     <td>{{$dP->tgl_lhr_pasien}}</td>
                     <td>{{$dP->jk_pasien}}</td>
                     <td> 
-                        <button class="btn rounded-6" style="background: #51BFBA;"><a class="m-4 text-white" href = "/pasien/view/{{$dP->no_pasien}}">View</a></button>
+                        <button class="btn btn-primary rounded-6"> <a style="background: #51BFBA;"><a  style="text-decoration:none" class="text-white" href = "/pasien/view/{{$dP->no_pasien}}">View</a></button>
                         &nbsp;
                     </td>
                     <td> 
-                        <button class="btn btn-primary rounded-6"><a class="m-4 text-white" href = "/pasien/edit/{{$dP->no_pasien}}">Edit</a></button>
+                        <button class="btn btn-primary rounded-6"><a style="background: #51BFBA;"><a  style="text-decoration:none" class="text-white" href = "/pasien/edit/{{$dP->no_pasien}}">Edit</a></button>
                         &nbsp;
                     </td>
                     </tr>
@@ -82,27 +68,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
-=======
-         <tbody>
-            
-            <tr>
-                @foreach($dataPasien as $dP)
-               <td>{{$dP->no_pasien}}</td>
-               <td>{{$dP->nama_pasien}}</td>
-               <td>{{$dP->tgl_lhr_pasien}}</td>
-               <td>{{$dP->jk_pasien}}</td>
-               <td> 
-                  <a href = "/pasien/view/{{$dP->no_pasien}}">View</a>
-                  &nbsp;
-               </td>
-               <td> 
-                  <a href = "/pasien/edit/{{$dP->no_pasien}}">Edit</a>
-                  &nbsp;
-               </td>
-            </tr>
-            @endforeach
-         <tbody>
-      </table>
-   </body>
-</html>
->>>>>>> e5ad65302a9a8cccd302e2d5748900bfb85dd2d9

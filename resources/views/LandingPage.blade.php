@@ -22,14 +22,10 @@
             <br>
             <div class="row mt-5 pt-5">
                 <div class="col">
-            <form action="" method="post">
-                <button type="submit" name="login"  class="btn btn-primary tombol_login"><a href ="/LoginAdmin"></a>Admin</button>
-            </form>
+                <button class="btn btn-primary tombol_login"><a   style="text-decoration:none;"class="text-white" href ="/LoginAdmin">Admin</a></button> 
             </div>
                 <div class="col">
-            <form action="" method="post">
-                <button type="submit" name="login"  class="btn btn-primary tombol_login"><a href="/LoginPerawat"></a>Dokter/Perawat</button>
-            </form>
+                <button class="btn btn-primary tombol_login"><a  style="text-decoration:none;" class="text-white"text-decoration: none; href="/LoginPerawat">Perawat</a></button>
             </div>
             </div>
         

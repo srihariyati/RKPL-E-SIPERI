@@ -21,7 +21,7 @@
     <div class="container box bg-white mt-2 radius-13 ">
         <div class="row row-cols-auto">
             <div class="">
-                <img class="text-center pt-4 pb-3 button1" src="/img/back.png" alt="arrowBack" >
+                <a onclick="history.back()"><img img class="text-center pt-4 pb-3 button1" src="/img/back.png" alt="arrowBack"></a>
             </div>
             <div class="">
                 <h4 class="text-center pt-4 pb-3 mt-1  button1">Data Dokter Umum dan Spesialis Gigi</h4>

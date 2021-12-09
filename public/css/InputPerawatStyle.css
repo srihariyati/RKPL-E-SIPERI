@@ -1,5 +1,5 @@
 .background {
-    background: url(/img/bc.png);
+    background: url(/img/bck.png);
     background-size: cover;
     overflow: hidden;
 }
@@ -28,28 +28,27 @@ p {
     margin-top: -40px;
 }
 
-label{
+label {
     width: 90%;
     margin-left: 6%;
 }
 
-input{
+input {
     background-color: #51BFBA;
     width: 90%;
     margin-left: 5%;
     border-radius: 6px;
 }
 
-.button1{
+.button1 {
     float: left;
     margin-left: 20px;
     margin-top: -20px;
     background-color: transparent;
     border-color: transparent;
-    
 }
 
-.button2{
+.button2 {
     float: right;
     margin-right: 30px;
     margin-top: 10px;
@@ -62,9 +61,8 @@ input{
     padding: 8px 40px;
 }
 
-.judul{
+.judul {
     text-align: center;
     color: #000000;
     font-weight: bold;
- 
 }
