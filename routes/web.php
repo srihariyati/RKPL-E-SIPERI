@@ -38,8 +38,10 @@ Route::get('/MenuPerawat',function(){
 
 Route::get('/Input','PasienController@input');
 Route::post('/pribadipasien/store','PasienController@pribadiStore');
+
 Route::post('/medikpasien/store','PasienController@medikStore');
 Route::post('/tindakanpasien/store','PasienController@tindakanStore');
+Route::get('/tambah/tindakan/{nomorPasien}','PasienController@tambahTindakan');
 
 Route::get('/admin/inputperawat', function(){
     return view('InputPerawat');

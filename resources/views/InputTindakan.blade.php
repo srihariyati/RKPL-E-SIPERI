@@ -13,6 +13,9 @@
     <title> SiPERI - Tambah Tindakan </title>       
     </head>
     <body class="background">
+    <nav class="navbar">
+    <a href="/MenuPerawat"><img src="/img/logo.png" alt="logo"></a>
+    </nav>
         <div class="box">
           
             <p class="judul">Masukkan Data Tindakan Pasien</p>

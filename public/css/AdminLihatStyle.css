@@ -1,7 +1,6 @@
 .background {
-    background: url('/img/bg.png');
+    background: url('/img/bck.png');
     background-size: cover;
-    overflow: hidden;
 }
 
 .background .disini {
@@ -56,24 +55,24 @@ select {
     border-radius: 6px;
 }
 
-text{
+text {
     color: #000000;
     background-color: #51BFBA;
 }
 
-label{
+label {
     width: 90%;
     margin-left: 6%;
 }
 
-input{
+input {
     background-color: #51BFBA;
     width: 90%;
     margin-left: 5%;
     border-radius: 6px;
 }
 
-.button2{
+.button2 {
     float: right;
     margin-right: 180px;
     background: #053d2c;
@@ -85,9 +84,8 @@ input{
     padding: 8px 50px;
 }
 
-.judul{
+.judul {
     text-align: center;
     color: #000000;
     font-weight: bold;
- 
 }

@@ -30,6 +30,7 @@ class PasienController extends Controller
         ->with(['nomorPasien'=>$nomorPasien]);
     }
 
+    
     public function medikStore(Request $request)
     {
         DB::table('medik_pasien')->insert([
@@ -50,7 +51,15 @@ class PasienController extends Controller
         ->with(['nomorPasien'=>$nomorPasien])
         ->with(['namaDokter'=>$namaDokter]);
     }   
-    
+
+    public function tambahTindakan($nomorPasien)
+    {
+        $namaDokter = DB::table('data_dokter')->get();
+        return view('InputTindakan')
+        ->with(['nomorPasien'=>$nomorPasien])
+        ->with(['namaDokter'=>$namaDokter]);
+    }
+
     public function tindakanStore(Request $request)
     {
         DB::table('tindakan_pasien')->insert([
@@ -60,7 +69,8 @@ class PasienController extends Controller
             'nama_dokter'=>$request->dokterTindakan,
             'tindakan'=>$request->jenisTindakan
         ]);
-        return view('MenuPerawat');
+        $nomorPasien = $request->noPasien;
+        return redirect()->action([PasienController::class, 'viewPasien'],['no_pasien' => $request->noPasien]);
     }
     
     public function showPasien($nama_dokter)
@@ -102,6 +112,7 @@ class PasienController extends Controller
 
         return view('EditDataPasien',['pribadipasien'=>$pribadipasien]);
     }
+    
     public function updatePribadiPasien(Request $request)
     {
         DB::table('data_pasien')->where('no_pasien', $request->noPasien)

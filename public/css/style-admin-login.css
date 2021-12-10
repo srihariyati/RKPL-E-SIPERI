@@ -1,7 +1,6 @@
 .background {
     background: url(../img/bck.png);
     background-size: cover;
-    overflow: hidden;
 }
 
 .background .disini {

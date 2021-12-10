@@ -1,4 +1,4 @@
-.rounded-6{
+.rounded-6 {
     height: 39px;
     left: 138px;
     right: 118px;
@@ -6,15 +6,15 @@
     border-radius: 6px;
 }
 
-.spacing{
+.spacing {
     letter-spacing: 0.03em;
 }
 
-.radius-13{
+.radius-13 {
     border-radius: 13px;
 }
 
-.btn-peri{
+.btn-peri {
     width: 110px;
     height: 48px;
     left: 1180px;
@@ -33,16 +33,25 @@
     box-shadow: -14px 13px 21px rgba(0, 0, 0, 0.25);
 }
 
-.button1{
+.button1 {
     float: left;
     margin-left: 20px;
     background-color: transparent;
     border-color: transparent;
-    
 }
 
 .background {
     background: url(/img/bck.png);
     background-size: cover;
     overflow: hidden;
+}
+
+.table100-head th {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.table100-body td {
+    padding-top: 16px;
+    padding-bottom: 16px;
 }

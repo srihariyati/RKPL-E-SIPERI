@@ -14,7 +14,7 @@
 
     <body class="background">
         <nav class="navbar">
-            <img src="/img/logo.png" alt="logo">
+        <a href="/MenuPerawat"><img src="/img/logo.png" alt="logo"></a>
         </nav>
         <div class="box">
         <p class="judul">Masukkan Data Medik Pasien</p>

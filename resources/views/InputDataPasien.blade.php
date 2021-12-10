@@ -16,11 +16,9 @@
 
 <body class="background">
     <nav class="navbar">
-        <img src="/img/logo.png" alt="logo">
+    <a href="/MenuPerawat"><img src="/img/logo.png" alt="logo"></a>
     </nav>
     <div class="box">
-        <p class="judul">Masukkan Data Pasien</p>
-
         <form action="/pribadipasien/store" method="post" role="form">
             {{csrf_field()}}
             <a onclick="history.back()"><img img class="text-center pt-4 pb-3 button1" src="/img/back.png" alt="arrowBack"></a>

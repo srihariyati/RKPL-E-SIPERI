@@ -64,7 +64,6 @@
 .background {
     background: url(/img/bck.png);
     background-size: cover;
-    overflow: hidden;
 }
 
 .bg-dark {
@@ -83,4 +82,27 @@
     border: none;
     text-align: center;
     padding: 8px 30px;
+}
+
+.button3 {
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    background: #2fc7a4;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+    padding: 8px 30px;
+}
+
+.table100-head th {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.table100-body td {
+    padding-top: 16px;
+    padding-bottom: 16px;
 }

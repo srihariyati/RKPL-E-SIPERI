@@ -16,7 +16,7 @@
 </head>
 <body class="bg-dark">
     <nav class="navbar">
-        <img src="/img/logo.png" alt="logo">
+    <a href="/MenuPerawat"><img src="/img/logo.png" alt="logo"></a>
     </nav>
 
     <form action="" class="container bg-white mt-5 radius-13 font-weight-bold">
@@ -31,17 +31,19 @@
 
             <div class="col-sm d-flex justify-content-end  mt-4 ">
                 @foreach($dataPasien as $d)
-               <button class="border-0 btn-peri" style="background: #51BFBA;"><a class=" text-white" href="/datapasien/print/{{$d->no_pasien}}" target="blank">Unduh</a></button>
+               <button class="border-0 btn-peri" style="background: #51BFBA;"><a class=" text-white" href="/datapasien/print/{{$d->no_pasien}}" target="blank">Cetak</a></button>
                @endforeach($dataPasien as $d)
             </div>
         </div>
         <div class="container">
             <p class="text-white rounded-6 container pt-2" style="background: #51BFBA;">Data Pasien</p>
+            @foreach($dataPasien as $dP)
+            <button class="button2" style="background: #51BFBA;"><a class=" text-white" href="/pasien/edit/{{$dP->no_pasien}}"target="blank">Edit</a></button>
             <div class="container spacing">
                 <table>
      
         <tbody>
-            @foreach($dataPasien as $dP)
+  
             <tr><td>ID</td><td>: {{$dP->no_pasien}}</td></tr>
             <tr><td>Nama</td><td>: {{$dP->nama_pasien}}</td></tr>
             <tr><td>Tanggal Lahir</td><td>: {{$dP->tgl_lhr_pasien}}</td></tr>
@@ -70,7 +72,10 @@
             </div>
 
     <p class="text-white rounded-6 container pt-2" style="background: #51BFBA;">Riwayat Tindakan</p>
-            <div class="container spacing ">
+    @foreach($dataPasien as $dd)
+    <td><button class="button3" ><a class=" text-white" href="/tambah/tindakan/{{$dd->no_pasien}}""target="blank">+ Tambah</a></button></td>
+    @endforeach($dataPasien as $dd)       
+    <div class="container spacing ">
             <table class="table">
             <thead>
                 <tr>
@@ -88,6 +93,7 @@
                 <td>{{$dT->tindakan}}</td>
                 <td>{{$dT->nama_dokter}}</td>
                 <td>{{$dT->nama_spesialis}}</td>
+                <td><button class="button2" style="background: #51BFBA;"><a class=" text-white" href="/tindakan/edit/{$T->id_tindakan}"target="blank">Edit</a></button></td>
                 </tr>
                 @endforeach($dataTindakan as $dT)
             <tbody>

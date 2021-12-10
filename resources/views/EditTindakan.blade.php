@@ -24,7 +24,7 @@
             <a onclick="history.back()"><img img class="text-center pt-4 pb-3 button1" src="/img/back.png" alt="arrowBack"></a>
             </div>
             <div class="">
-                <h3 class="justify-content-start pt-4 pb-3">Data Riwayat Pasien</h3>
+                <h3 class="justify-content-start pt-4 pb-3">Data Riwayat Pasien {{$nomorpasien}}</h3>
             </div>
         <div class="container">
         <table class="table">
@@ -52,8 +52,11 @@
             </tbody>
         </table>
 
-        <form>
+        <form action="/tambah/tindakan/{{$nomorpasien}}" method="GET">  
         <button type="submit" class="button2">Tambah</button>
+        </form>
+        <form action="/pasien/view/{{$nomorpasien}}" method="GET">  
+        <button type="submit" class="button2">Simpan Perubahan</button>
         </form>
         </div>
     </div>

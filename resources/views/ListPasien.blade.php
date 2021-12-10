@@ -13,7 +13,7 @@
 </head>  
   <body class="bg-dark">
     <nav class="navbar">
-        <img src="/img/logo.png" alt="logo">
+    <a href="/MenuPerawat"><img src="/img/logo.png" alt="logo"></a>
     </nav>
     <div  class="container box bg-white mt-5 radius-13 font-weight-bold">
         <div class="row row-cols-auto">
@@ -28,6 +28,7 @@
             </div>
         </div>
         <div class="container">
+            
             <table class="table">
                 <thead class="text-white" style="background: #51BFBA;">
                     <tr>
@@ -35,6 +36,7 @@
                     <th scope="col">Nama Pasien</th>
                     <th scope="col">Tanggal Lahir</th>
                     <th scope="col">Jenis Kelamin</th>
+                    <th scope="col"></th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     </tr>
@@ -47,11 +49,15 @@
                     <td>{{$dP->tgl_lhr_pasien}}</td>
                     <td>{{$dP->jk_pasien}}</td>
                     <td> 
-                        <button class="btn btn-primary rounded-6"> <a style="background: #51BFBA;"><a  style="text-decoration:none" class="text-white" href = "/pasien/view/{{$dP->no_pasien}}">View</a></button>
+                        <button class="btn btn-primary rounded-6" style="background: #51BFBA;"><a  style="text-decoration:none" class="text-white" href = "/pasien/view/{{$dP->no_pasien}}">Lihat</a></button>
                         &nbsp;
                     </td>
                     <td> 
-                        <button class="btn btn-primary rounded-6"><a style="background: #51BFBA;"><a  style="text-decoration:none" class="text-white" href = "/pasien/edit/{{$dP->no_pasien}}">Edit</a></button>
+                        <button class="btn btn-primary rounded-6" style="background: #51BFBA;"><a  style="text-decoration:none" class="text-white" href = "/pasien/edit/{{$dP->no_pasien}}">Edit</a></button>
+                        &nbsp;
+                    </td>
+                    <td> 
+                    <button class="btn btn-primary rounded-6" style="background: #51BFBA;"><a style="text-decoration:none"  class=" text-white" href="/datapasien/print/{{$dP->no_pasien}}" target="blank">Cetak</a></button>
                         &nbsp;
                     </td>
                     </tr>
