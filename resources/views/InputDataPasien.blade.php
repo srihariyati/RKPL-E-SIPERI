@@ -24,7 +24,7 @@
         <form action="/pribadipasien/store" method="post" role="form">
             {{csrf_field()}}
             <a onclick="history.back()"><img img class="text-center pt-4 pb-3 button1" src="/img/back.png" alt="arrowBack"></a>
-
+            <p class="judul">Masukkan Data Pasien</p>
             <label>Nomor Pasien</label><br>
             <input type="text" required="required" name="noPasien"></br>
 

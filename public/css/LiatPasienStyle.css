@@ -71,3 +71,16 @@
     background: url(/img/bck.png);
     background-size: cover;
 }
+
+.button2 {
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    background: #3D84C2;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+    padding: 8px 30px;
+}

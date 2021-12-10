@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <link rel="stylesheet" href="/css/LiatPasienStyle.css">
 </head>  
-  <body class="bg-dark background">
+  <body class="bg-dark">
     <nav class="navbar">
         <img src="/img/logo.png" alt="logo">
     </nav>
