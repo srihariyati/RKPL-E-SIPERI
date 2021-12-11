@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2021 at 02:03 PM
+-- Generation Time: Dec 11, 2021 at 01:56 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -69,7 +69,9 @@ CREATE TABLE `data_pasien` (
 --
 
 INSERT INTO `data_pasien` (`no_pasien`, `nama_pasien`, `tgl_lhr_pasien`, `almt_pasien`, `nohp_pasien`, `jk_pasien`) VALUES
-('PS02', 'Luna', '2021-12-15', 'Aceh', '081213141516', 'Perempuan');
+('PS01', 'Anisa', '1998-02-02', 'Banda Aceh', '081122334455', 'Perempuan'),
+('PS02', 'Luna', '1999-12-02', 'Jln. Teuku Nyak Arif No.411', '081122671811', 'Perempuan'),
+('PS04', 'Sri Hariyati', '1999-11-11', 'Jalan Cot Dama- Iboih', '+6282274960237', 'Perempuan');
 
 -- --------------------------------------------------------
 
@@ -127,7 +129,8 @@ CREATE TABLE `login_perawat` (
 --
 
 INSERT INTO `login_perawat` (`no_pegawai`, `nama_perawat`, `password`) VALUES
-('a', 'a', 'aaaaaaaa');
+('1918', 'Agustine', '12345'),
+('a', 'a', 'a');
 
 -- --------------------------------------------------------
 
@@ -151,7 +154,8 @@ CREATE TABLE `medik_pasien` (
 --
 
 INSERT INTO `medik_pasien` (`no_pasien`, `gol_darah`, `tek_darah`, `jantung`, `diabetes`, `hepatitis`, `alergi_obat`, `alergi_mkn`) VALUES
-('PS02', 'O', '90/100', 'Tidak', 'Tidak', 'Tidak', 'Tidak', 'Ya');
+('PS02', 'A', '90/100', 'Tidak', 'Tidak', 'Tidak', 'Tidak', 'Ya'),
+('PS04', 'B', '90/100', 'Tidak', 'Tidak', 'Tidak', 'Ya', 'Tidak');
 
 -- --------------------------------------------------------
 
@@ -175,7 +179,13 @@ CREATE TABLE `tindakan_pasien` (
 INSERT INTO `tindakan_pasien` (`id_tindakan`, `no_pasien`, `tgl_tindakan`, `nama_spesialis`, `nama_dokter`, `tindakan`) VALUES
 (1, 'PS02', '2021-11-19', 'Dokter Gigi Umum', 'drg. Sri Hariyati. S.Kg.', 'Pemeriksaan Kesehatan Gigi'),
 (3, 'PS02', '2021-11-03', 'Dokter Gigi Umum', 'drg. Sri Hariyati. S.Kg.', 'Pemeriksaan Kesehatan Gigi'),
-(4, 'PS02', '2021-11-03', 'Spesialis Bedah Mulut', 'drg. Sri Hariyati. S.Kg.', 'Pemeriksaan Kesehatan Gigi');
+(9, 'PS02', '2021-12-21', 'Dokter Gigi Umum', 'drg. Sausan Nabilah. S.Kg.', 'Scalling'),
+(14, 'PS02', '2021-12-10', 'Dokter Gigi Umum', 'drg. Sri Hariyati. S.Kg.', 'Pemeriksaan'),
+(15, 'PS02', '2021-12-10', 'Dokter Gigi Umum', 'drg. Sri Hariyati. S.Kg.', 'Pemeriksaan'),
+(16, 'PS02', '2021-12-10', 'Dokter Gigi Umum', 'drg. Ali Syech. S.Kg, Sp.PM.', 'Pemeriksaan'),
+(17, 'PS02', '2021-12-10', 'Dokter Gigi Umum', 'drg. Ali Syech. S.Kg, Sp.PM.', 'Pemeriksaan'),
+(18, 'PS02', '2021-12-23', 'Spesialis Konservasi Mulut', 'drg. Siska Nasution. S.Kg, Sp.BM.', 'tes'),
+(19, 'PS04', '2021-12-22', 'Dokter Gigi Umum', 'drg. Ikram Muhaimin. S.Kg.', 'tes');
 
 --
 -- Indexes for dumped tables
@@ -219,7 +229,7 @@ ALTER TABLE `tindakan_pasien`
 -- AUTO_INCREMENT for table `tindakan_pasien`
 --
 ALTER TABLE `tindakan_pasien`
-  MODIFY `id_tindakan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_tindakan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
